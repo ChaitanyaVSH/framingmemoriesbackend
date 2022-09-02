@@ -4,7 +4,7 @@ const routes = require("./routes")
 
 const app = express();
 
-app.use(`/api`, routes);
+app.use(`/.netlify/functions/api`, routes);
 
 module.exports = app;
 module.exports.handler = serverless(app);
