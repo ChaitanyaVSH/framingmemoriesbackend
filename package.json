@@ -1,0 +1,21 @@
+{
+  "name": "framingmemoriesbackend",
+  "version": "1.0.0",
+  "description": "Backend APIs for framingmemories",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
+  },
+  "keywords": [
+    "photography"
+  ],
+  "author": "Chaitanya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^3.0.2"
+  }
+}
