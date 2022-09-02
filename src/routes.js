@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const getImages = require("./services/notionService")
 
-router.get("/", (req, res) => {
-    res.json({
-        hello: "hi!"
-    });
+router.get("/getImages", async (req, res) => {
+    const data = await getImages()
+    res.json(data);
 });
 
 router.get('/test',(req,res) => {
