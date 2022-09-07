@@ -6,8 +6,16 @@ const routes = require("./routes")
 
 const app = express();
 
-// Enable CORS for the frontend domain to call the APIs hosted on this server
-app.use(cors())
+
+/**
+ * https://www.npmjs.com/package/cors
+ * Enable CORS for the frontend domain to call the APIs hosted on this server
+ */
+const corsOptions = {
+    origin: "https://framingmemories.netlify.app/",
+    optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
 
 app.use(`/.netlify/functions/api`, routes);
 
