@@ -12,7 +12,7 @@ const app = express();
  * Enable CORS for the frontend domain to call the APIs hosted on this server
  */
 const corsOptions = {
-    origin: "https://framingmemories.netlify.app/",
+    origin: "https://framingmemories.netlify.app",
     optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions))
